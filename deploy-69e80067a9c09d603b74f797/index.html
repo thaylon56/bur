@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burdog Pizzaria e Lanchonete</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <div>
+        <h1>BURDOG</h1>
+        <p class="subtitulo">Pizzaria e Lanchonete</p>
+      </div>
+
+      <nav>
+        <a href="#promocoes">Promoções</a>
+        <a href="#pizzas">Pizzas</a>
+        <a href="#lanches">Lanches</a>
+        <a href="#extras">Extras</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h2>O sabor da Burdog na sua casa</h2>
+        <p>Pedidos pelo WhatsApp • Feito com amor • Entrega disponível</p>
+        <a class="botao-whats" href="https://wa.me/5595991249451" target="_blank">📲 Chamar no WhatsApp</a>
+      </div>
+
+      <div class="info-rapidas">
+        <h3>Informações rápidas</h3>
+        <ul>
+          <li>WhatsApp: <strong>(95) 99124-9451</strong></li>
+          <li>Funcionamento: <strong>Qui a Ter, 18h às 23h</strong></li>
+          <li>Quarta-feira: <strong>Fechado</strong></li>
+          <li>Aceitamos cartões</li>
+          <li>Endereço: <strong>Rua rio Ereu n157, Aracelis</strong></li>
+          <li>Refrigerante: sabor e preço confirmados por mensagem</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="promocoes">
+      <h2 class="titulo-secao">Promoções</h2>
+
+      <div class="grid-promos">
+        <div class="card promo">
+          <h3>X Tudo (carne de hambúrguer)</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 40,00</div>
+          <button class="btn-add" data-name="X Tudo (carne de hambúrguer)" data-price="40">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card promo">
+          <h3>2 X Salada pequeno (carne de hambúrguer)</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 30,00</div>
+          <button class="btn-add" data-name="2 X Salada pequeno (carne de hambúrguer)" data-price="30">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card promo">
+          <h3>Pizza grande + batata pequena + Bare 1L</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 55,00</div>
+          <button
+            class="btn-add"
+            data-name="Pizza grande + batata pequena + Bare 1L"
+            data-price="55"
+            data-promo-pizza="true"
+            type="button"
+          >
+            Adicionar ao carrinho
+          </button>
+        </div>
+
+        <div class="card promo">
+          <h3>X Tudo Aloprado (carne de hambúrguer) + batata pequena + Bare 1L</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 55,00</div>
+          <button class="btn-add" data-name="X Tudo Aloprado (carne de hambúrguer) + batata pequena + Bare 1L" data-price="55">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card promo">
+          <h3>X Salada Aloprado (carne de hambúrguer) + batata pequena</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 35,00</div>
+          <button class="btn-add" data-name="X Salada Aloprado (carne de hambúrguer) + batata pequena" data-price="35">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="card promo">
+          <h3>3 Cachorro-quente na chapa</h3>
+          <p>Dinheiro ou Pix</p>
+          <div class="preco-destaque">R$ 15,00</div>
+          <button class="btn-add" data-name="3 Cachorro-quente na chapa" data-price="15">Adicionar ao carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="pizzas">
+      <h2 class="titulo-secao">Pizzas grandes</h2>
+
+      <div class="grid-duplo">
+        <div class="card">
+          <h3>Sabores tradicionais</h3>
+
+          <div class="item">
+            <div>
+              <strong>Mussarela</strong>
+              <span>Molho, mussarela, milho, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 39,00</span>
+              <button class="btn-add" data-name="Pizza Mussarela" data-price="39" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Milho</strong>
+              <span>Molho, mussarela, milho, azeitona e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Milho" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Batata Palha</strong>
+              <span>Molho, mussarela e batata palha.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Batata Palha" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Presunto</strong>
+              <span>Molho, mussarela, presunto e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Presunto" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>A Moda</strong>
+              <span>Molho, mussarela, presunto, ovos, cebola, calabresa, azeitona e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza A Moda" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Portuguesa</strong>
+              <span>Molho, mussarela, presunto, ovos, cebola, azeitona e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Portuguesa" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Frango</strong>
+              <span>Molho, mussarela, frango, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Frango" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Batata Frita</strong>
+              <span>Molho, mussarela, batata frita, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Batata Frita" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Calabresa</strong>
+              <span>Molho, mussarela, calabresa, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Calabresa" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Mussarela c/ Catupiry</strong>
+              <span>Molho, mussarela, catupiry e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Mussarela com Catupiry" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Sabores especiais</h3>
+
+          <div class="item">
+            <div>
+              <strong>Paris</strong>
+              <span>Molho, mussarela, presunto, calabresa e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Paris" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Catarina</strong>
+              <span>Molho, mussarela, ovo, cebola, catupiry e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Catarina" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Bacon</strong>
+              <span>Molho, mussarela, bacon, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Bacon" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Americana</strong>
+              <span>Molho, mussarela, bacon, milho, ovo, azeitona e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Americana" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Frango com Catupiry</strong>
+              <span>Molho, mussarela, frango, catupiry, milho e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Frango com Catupiry" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Calabresa com Catupiry</strong>
+              <span>Molho, mussarela, catupiry, calabresa, cebola e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Calabresa com Catupiry" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Frango c/ Batata Palha</strong>
+              <span>Molho, frango, mussarela, batata palha e orégano.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 40,00</span>
+              <button class="btn-add" data-name="Pizza Frango com Batata Palha" data-price="40" data-is-pizza="true">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lanches">
+      <h2 class="titulo-secao">Sanduíches</h2>
+
+      <div class="card">
+        <h3>Lanches</h3>
+
+        <div class="item opcoes">
+          <div>
+            <strong>01 - Hambúrguer</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="01 - Hambúrguer (Pequeno)" data-price="11" data-requires-meat="true">Pequeno R$ 11</button>
+            <button class="btn-add vermelho" data-name="01 - Hambúrguer (Aloprado)" data-price="13" data-requires-meat="true">Aloprado R$ 13</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>02 - X Hambúrguer</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="02 - X Hambúrguer (Pequeno)" data-price="13" data-requires-meat="true">Pequeno R$ 13</button>
+            <button class="btn-add vermelho" data-name="02 - X Hambúrguer (Aloprado)" data-price="16" data-requires-meat="true">Aloprado R$ 16</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>03 - X Hambúrguer 2 queijos</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="03 - X Hambúrguer 2 queijos (Pequeno)" data-price="13" data-requires-meat="true">Pequeno R$ 13</button>
+            <button class="btn-add vermelho" data-name="03 - X Hambúrguer 2 queijos (Aloprado)" data-price="17" data-requires-meat="true">Aloprado R$ 17</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>04 - X Hambúrguer c/ catupiry</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="04 - X Hambúrguer c/ catupiry (Pequeno)" data-price="17" data-requires-meat="true">Pequeno R$ 17</button>
+            <button class="btn-add vermelho" data-name="04 - X Hambúrguer c/ catupiry (Aloprado)" data-price="22" data-requires-meat="true">Aloprado R$ 22</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>05 - X Salada</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="05 - X Salada (Pequeno)" data-price="18" data-requires-meat="true">Pequeno R$ 18</button>
+            <button class="btn-add vermelho" data-name="05 - X Salada (Aloprado)" data-price="30" data-requires-meat="true">Aloprado R$ 30</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>06 - Hambúrguer c/ calabresa</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="06 - Hambúrguer c/ calabresa (Pequeno)" data-price="22" data-requires-meat="true">Pequeno R$ 22</button>
+            <button class="btn-add vermelho" data-name="06 - Hambúrguer c/ calabresa (Aloprado)" data-price="35" data-requires-meat="true">Aloprado R$ 35</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>07 - Hambúrguer c/ bacon</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="07 - Hambúrguer c/ bacon (Pequeno)" data-price="22" data-requires-meat="true">Pequeno R$ 22</button>
+            <button class="btn-add vermelho" data-name="07 - Hambúrguer c/ bacon (Aloprado)" data-price="35" data-requires-meat="true">Aloprado R$ 35</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>08 - X Hambúrguer c/ calabresa e bacon</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="08 - X Hambúrguer c/ calabresa e bacon (Pequeno)" data-price="23" data-requires-meat="true">Pequeno R$ 23</button>
+            <button class="btn-add vermelho" data-name="08 - X Hambúrguer c/ calabresa e bacon (Aloprado)" data-price="35" data-requires-meat="true">Aloprado R$ 35</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>09 - X Americana</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="09 - X Americana (Pequeno)" data-price="15" data-requires-meat="true">Pequeno R$ 15</button>
+            <button class="btn-add vermelho" data-name="09 - X Americana (Aloprado)" data-price="23" data-requires-meat="true">Aloprado R$ 23</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>10 - X Burdog</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="10 - X Burdog (Pequeno)" data-price="25" data-requires-meat="true">Pequeno R$ 25</button>
+            <button class="btn-add vermelho" data-name="10 - X Burdog (Aloprado)" data-price="45" data-requires-meat="true">Aloprado R$ 45</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>24 - X Salsicha</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="24 - X Salsicha (Pequeno)" data-price="12" data-requires-meat="true">Pequeno R$ 12</button>
+            <button class="btn-add vermelho" data-name="24 - X Salsicha (Aloprado)" data-price="20" data-requires-meat="true">Aloprado R$ 20</button>
+          </div>
+        </div>
+
+        <div class="item opcoes">
+          <div>
+            <strong>25 - Pão c/ queijo</strong>
+            <span>Escolha a carne ao adicionar.</span>
+          </div>
+          <div class="botoes-opcao">
+            <button class="btn-add" data-name="25 - Pão c/ queijo (Pequeno)" data-price="7" data-requires-meat="true">Pequeno R$ 7</button>
+            <button class="btn-add vermelho" data-name="25 - Pão c/ queijo (Aloprado)" data-price="15" data-requires-meat="true">Aloprado R$ 15</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras">
+      <h2 class="titulo-secao">Extras</h2>
+
+      <div class="grid-duplo">
+        <div class="card">
+          <h3>Cachorro-quente</h3>
+
+          <div class="item">
+            <div>
+              <strong>001 - Cachorro quente na chapa</strong>
+              <span>Molho, salsicha, milho, ketchup e maionese.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 6,00</span>
+              <button class="btn-add" data-name="Cachorro quente na chapa" data-price="6">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>003 - Cachorro quente calabresa</strong>
+              <span>Molho, salsicha, calabresa, milho e queijo.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 12,00</span>
+              <button class="btn-add" data-name="Cachorro quente calabresa" data-price="12">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>004 - Cachorro quente c/ catupiry</strong>
+              <span>Molho, salsicha, catupiry, milho e batata palha.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 10,00</span>
+              <button class="btn-add" data-name="Cachorro quente com catupiry" data-price="10">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>005 - Cachorro quente bacon</strong>
+              <span>Molho, salsicha, bacon, milho e batata palha.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 15,00</span>
+              <button class="btn-add" data-name="Cachorro quente bacon" data-price="15">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Bebidas e acompanhamentos</h3>
+
+          <div class="item">
+            <div>
+              <strong>Batata frita pequena</strong>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 10,00</span>
+              <button class="btn-add" data-name="Batata frita pequena" data-price="10">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Batata frita média</strong>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">R$ 16,00</span>
+              <button class="btn-add" data-name="Batata frita média" data-price="16">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item">
+            <div>
+              <strong>Refrigerante</strong>
+              <span>Bare, Coca-Cola, Schin e Tuchaua. Sabor e preço escolhidos por mensagem.</span>
+            </div>
+            <div class="lado-direito">
+              <span class="preco">Consultar</span>
+              <button class="btn-add" data-name="Refrigerante (escolher sabor e preço)" data-price="0">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="item" style="display:block; border-bottom:none; padding-bottom:0;">
+            <div>
+              <strong>Sucos</strong>
+            </div>
+
+            <div class="grid-sucos" style="margin-top:12px;">
+              <div class="suco-card">
+                <strong>Acerola (500ml)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 8,00</div>
+                <button class="btn-add" data-name="Suco Acerola (500ml)" data-price="8">Adicionar</button>
+              </div>
+
+              <div class="suco-card">
+                <strong>Acerola (Jarra)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 16,00</div>
+                <button class="btn-add" data-name="Suco Acerola (Jarra)" data-price="16">Adicionar</button>
+              </div>
+
+              <div class="suco-card">
+                <strong>Cupuaçu (500ml)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 8,00</div>
+                <button class="btn-add" data-name="Suco Cupuaçu (500ml)" data-price="8">Adicionar</button>
+              </div>
+
+              <div class="suco-card">
+                <strong>Cupuaçu (Jarra)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 16,00</div>
+                <button class="btn-add" data-name="Suco Cupuaçu (Jarra)" data-price="16">Adicionar</button>
+              </div>
+
+              <div class="suco-card">
+                <strong>Maracujá (500ml)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 10,00</div>
+                <button class="btn-add" data-name="Suco Maracujá (500ml)" data-price="10">Adicionar</button>
+              </div>
+
+              <div class="suco-card">
+                <strong>Maracujá (Jarra)</strong>
+                <span>Natural e gelado</span>
+                <div class="preco-suco">R$ 18,00</div>
+                <button class="btn-add" data-name="Suco Maracujá (Jarra)" data-price="18">Adicionar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2>Faça seu pedido agora</h2>
+      <p><strong>WhatsApp:</strong> (95) 99124-9451</p>
+      <p><strong>Endereço:</strong> Rua rio Ereu n157, Aracelis</p>
+      <p><strong>Funcionamento:</strong> Qui a Ter: 18h às 23h | Quarta: Fechado</p>
+    </section>
+  </main>
+
+  <button id="abrir-carrinho" class="carrinho-fixo" type="button">🛒 <span id="cart-count">0</span></button>
+
+  <div id="painel-carrinho" class="painel-carrinho escondido">
+    <div class="painel-topo">
+      <h3>Seu Carrinho</h3>
+      <button id="fechar-carrinho" type="button">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="total-box">
+      <p><strong>Total:</strong> R$ <span id="cart-total">0.00</span></p>
+      <button id="finalizar-btn" type="button">Finalizar Pedido</button>
+    </div>
+  </div>
+
+  <div id="modal-finalizar" class="modal escondido">
+    <div class="modal-conteudo">
+      <h3>Finalizar Pedido</h3>
+
+      <input id="customer-name" type="text" placeholder="Seu nome">
+      <input id="customer-phone" type="text" placeholder="Telefone com DDD">
+      <input id="customer-cpf" type="text" placeholder="CPF (programa de fidelidade)" maxlength="14">
+
+      <div id="fidelidade-saldo-box" class="taxa escondido">
+        <span id="fidelidade-saldo-texto"></span>
+      </div>
+
+      <input
+        id="fidelidade-pontos-usar"
+        class="escondido"
+        type="number"
+        min="1"
+        step="1"
+        placeholder="Pontos para usar (opcional)"
+      >
+
+      <div id="fidelidade-desconto-box" class="taxa escondido">
+        Desconto fidelidade: R$ <span id="fidelidade-desconto-valor">0.00</span>
+      </div>
+
+      <div id="fidelidade-historico-box" class="escondido">
+        <small id="fidelidade-historico-texto"></small>
+      </div>
+
+      <select id="order-type">
+        <option value="">Como deseja receber?</option>
+        <option value="entrega">Entrega</option>
+        <option value="retirada">Retirada</option>
+        <option value="local">Consumir no local</option>
+      </select>
+
+      <div id="delivery-fields" class="escondido">
+        <select id="delivery-neighborhood">
+          <option value="">Selecione seu bairro</option>
+        <option value="Aracelis" data-fee="4">Aracelis - R$ 4,00</option>
+        <option value="Raiar do Sol" data-fee="8">Raiar do Sol - R$ 8,00</option>
+        <option value="Buritis" data-fee="10">Buritis - R$ 10,00</option>
+        <option value="Joquei Clube" data-fee="8">Joquei Clube - R$ 8,00</option>
+        <option value="Asa Branca" data-fee="10">Asa Branca - R$ 10,00</option>
+        <option value="Pintolândia" data-fee="8">Pintolândia - R$ 8,00</option>
+        <option value="São Bento" data-fee="7">São Bento - Taxa R$ 7,00</option>
+        <option value="Bela Vista" data-fee="10">Bela Vista - Taxa R$ 10,00</option>
+        <option value="Nova Cidade" data-fee="10">Nova Cidade - Taxa R$ 10,00</option>
+        <option value="Operario" data-fee="10">Operario - Taxa R$ 10,00</option>
+        <option value="Distrito Industrial" data-fee="12">Distrito Industrial - Taxa R$ 12,00</option>
+        <option value="Jardim Tropical" data-fee="8">Jardim Tropical - Taxa R$ 8,00</option>
+        <option value="Olimpico" data-fee="8">Olimpico - Taxa R$ 8,00</option>
+        <option value="Centenario" data-fee="8">Centenario - Taxa R$ 8,00</option>
+        <option value="Cinturão verde" data-fee="8">Cinturão verde - Taxa R$ 8,00</option>
+        <option value="Silvio Leite" data-fee="10">Silvio Leite - Taxa R$ 10,00</option>
+        <option value="Santa teresa" data-fee="10">Santa Teresa - Taxa R$ 10,00</option>
+         <option value="outros" data-fee="0">Outros bairros - consultar taxa</option>
+        </select>
+
+        <div id="delivery-fee-box" class="taxa escondido">
+          Taxa de entrega: R$ <span id="delivery-fee-value">0.00</span>
+        </div>
+
+        <textarea id="delivery-address" placeholder="Rua, número, ponto de referência"></textarea>
+      </div>
+
+      <select id="payment-method">
+        <option value="">Forma de pagamento</option>
+        <option value="pix">Pix</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartao_credito">Cartão de crédito (+ R$ 2,00)</option>
+        <option value="cartao_debito">Cartão de débito (+ R$ 1,50)</option>
+      </select>
+
+      <div id="change-wrapper" class="escondido">
+        <select id="needs-change">
+          <option value="">Vai precisar de troco?</option>
+          <option value="nao">Não</option>
+          <option value="sim">Sim</option>
+        </select>
+
+        <input
+          id="change-amount"
+          class="escondido"
+          type="number"
+          min="0"
+          step="0.01"
+          placeholder="Troco para quanto?"
+        >
+      </div>
+
+      <div id="payment-fee-box" class="taxa escondido">
+        Taxa da maquininha: R$ <span id="payment-fee-value">0.00</span>
+      </div>
+
+      <textarea id="observations" placeholder="Observações (opcional)"></textarea>
+
+      <div class="acoes-modal">
+        <button id="cancelar-modal" type="button">Cancelar</button>
+        <button id="enviar-pedido" type="button">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-carne" class="modal escondido">
+    <div class="modal-conteudo">
+      <h3>Escolha a carne</h3>
+      <p id="meat-item-name"></p>
+
+      <div class="acoes-carne">
+        <button id="choose-caseira" type="button">Carne caseira</button>
+        <button id="choose-hamburguer" type="button">Carne de hambúrguer</button>
+      </div>
+
+      <div class="acoes-modal">
+        <button id="cancelar-carne" type="button">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-promo-pizza" class="modal escondido">
+    <div class="modal-conteudo">
+      <h3>Escolha o sabor da pizza</h3>
+
+      <select id="promo-pizza-flavor">
+        <option value="">Selecione o sabor</option>
+        <option value="Mussarela">Mussarela</option>
+        <option value="Milho">Milho</option>
+        <option value="Batata Palha">Batata Palha</option>
+        <option value="Presunto">Presunto</option>
+        <option value="A Moda">A Moda</option>
+        <option value="Portuguesa">Portuguesa</option>
+        <option value="Frango">Frango</option>
+        <option value="Batata Frita">Batata Frita</option>
+        <option value="Calabresa">Calabresa</option>
+        <option value="Mussarela com Catupiry">Mussarela com Catupiry</option>
+        <option value="Paris">Paris</option>
+        <option value="Catarina">Catarina</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Americana">Americana</option>
+        <option value="Frango com Catupiry">Frango com Catupiry</option>
+        <option value="Calabresa com Catupiry">Calabresa com Catupiry</option>
+        <option value="Frango com Batata Palha">Frango com Batata Palha</option>
+      </select>
+
+      <div class="acoes-modal">
+        <button id="cancelar-promo-pizza" type="button">Cancelar</button>
+        <button id="confirmar-promo-pizza" type="button">Adicionar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-pizza-metade" class="modal escondido">
+    <div class="modal-conteudo">
+      <h3>Escolha a pizza</h3>
+
+      <p id="pizza-sabor-base"></p>
+
+      <select id="pizza-mode">
+        <option value="inteira">Pizza inteira</option>
+        <option value="metade">Meio a meio</option>
+      </select>
+
+      <div id="pizza-segundo-sabor-box" class="escondido">
+        <label for="pizza-segundo-sabor"><strong>Escolha o outro sabor</strong></label>
+        <select id="pizza-segundo-sabor">
+          <option value="">Selecione o sabor</option>
+          <option value="Mussarela">Mussarela</option>
+          <option value="Milho">Milho</option>
+          <option value="Batata Palha">Batata Palha</option>
+          <option value="Presunto">Presunto</option>
+          <option value="A Moda">A Moda</option>
+          <option value="Portuguesa">Portuguesa</option>
+          <option value="Frango">Frango</option>
+          <option value="Batata Frita">Batata Frita</option>
+          <option value="Calabresa">Calabresa</option>
+          <option value="Mussarela com Catupiry">Mussarela com Catupiry</option>
+          <option value="Paris">Paris</option>
+          <option value="Catarina">Catarina</option>
+          <option value="Bacon">Bacon</option>
+          <option value="Americana">Americana</option>
+          <option value="Frango com Catupiry">Frango com Catupiry</option>
+          <option value="Calabresa com Catupiry">Calabresa com Catupiry</option>
+          <option value="Frango com Batata Palha">Frango com Batata Palha</option>
+        </select>
+      </div>
+
+      <div class="acoes-modal">
+        <button id="cancelar-pizza-metade" type="button">Cancelar</button>
+        <button id="confirmar-pizza-metade" type="button">Adicionar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="fidelidade.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
