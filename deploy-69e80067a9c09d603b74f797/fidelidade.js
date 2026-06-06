@@ -349,3 +349,4 @@ const Fidelidade = (function () {
     consultarHistorico,
   };
 })();
+
