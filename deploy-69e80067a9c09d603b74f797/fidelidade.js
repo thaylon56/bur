@@ -4,7 +4,7 @@
  */
 
 const FIDELIDADE_CONFIG = {
-  SUPABASE_URL: "Shttps://kbipcoltuputqtbxnzhz.supabase.co",
+  SUPABASE_URL: "https://kbipcoltuputqtbxnzhz.supabase.co",
   SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtiaXBjb2x0dXB1dHF0Ynhuemh6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2OTk2ODgsImV4cCI6MjA5NjI3NTY4OH0.DMBAftBsf8hpgVoTAW7Cfp6oE00LoNQRU9QamzjX2coE",
   VALOR_POR_PONTO: 0.03,
   DESCONTO_MAXIMO_PERCENTUAL: 0.2,
@@ -13,23 +13,50 @@ const FIDELIDADE_CONFIG = {
 const Fidelidade = (function () {
   let supabaseClient = null;
 
+  function normalizarSupabaseUrl(url) {
+    let limpa = String(url || "").trim();
+
+    if (limpa.startsWith("Shttps://")) {
+      limpa = limpa.replace(/^S/, "");
+    }
+
+    return limpa;
+  }
+
+  function validarConfiguracao() {
+    const url = normalizarSupabaseUrl(FIDELIDADE_CONFIG.SUPABASE_URL);
+    const chave = String(FIDELIDADE_CONFIG.SUPABASE_ANON_KEY || "").trim();
+
+    if (!url || url === "SUA_URL_DO_SUPABASE") {
+      return { valida: false, erro: "Configure a URL do Supabase em fidelidade.js" };
+    }
+
+    if (!chave || chave === "SUA_CHAVE_ANON_DO_SUPABASE") {
+      return { valida: false, erro: "Configure a chave anon do Supabase em fidelidade.js" };
+    }
+
+    if (!/^https?:\/\/.+/i.test(url)) {
+      return {
+        valida: false,
+        erro: "URL do Supabase inválida. Deve começar com https:// (ex: https://seu-projeto.supabase.co)",
+      };
+    }
+
+    return { valida: true, url, chave };
+  }
+
   function getClient() {
     if (!window.supabase) {
       throw new Error("Biblioteca Supabase não carregada.");
     }
 
     if (!supabaseClient) {
-      if (
-        FIDELIDADE_CONFIG.SUPABASE_URL === "SUA_URL_DO_SUPABASE" ||
-        FIDELIDADE_CONFIG.SUPABASE_ANON_KEY === "SUA_CHAVE_ANON_DO_SUPABASE"
-      ) {
-        throw new Error("Configure SUPABASE_URL e SUPABASE_ANON_KEY em fidelidade.js");
+      const config = validarConfiguracao();
+      if (!config.valida) {
+        throw new Error(config.erro);
       }
 
-      supabaseClient = window.supabase.createClient(
-        FIDELIDADE_CONFIG.SUPABASE_URL,
-        FIDELIDADE_CONFIG.SUPABASE_ANON_KEY
-      );
+      supabaseClient = window.supabase.createClient(config.url, config.chave);
     }
 
     return supabaseClient;
@@ -128,8 +155,8 @@ const Fidelidade = (function () {
     return novo;
   }
 
-  async function consultarSaldo(cpf) {
-    const cliente = await buscarOuCriarCliente(cpf);
+  async function consultarSaldo(cpf, nome) {
+    const cliente = await buscarOuCriarCliente(cpf, nome);
 
     return {
       cpf: cliente.cpf,

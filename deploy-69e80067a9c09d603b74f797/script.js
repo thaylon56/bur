@@ -253,17 +253,22 @@ async function carregarFidelidadePorCpf() {
 
   try {
     const nome = customerNameInput ? customerNameInput.value.trim() : "";
-    const saldo = await Fidelidade.consultarSaldo(validacao.cpf);
+    const saldo = await Fidelidade.consultarSaldo(validacao.cpf, nome);
     fidelidadeSaldoPontos = saldo.pontos;
 
     if (fidelidadeSaldoBox) fidelidadeSaldoBox.classList.remove("escondido");
     if (fidelidadeSaldoTexto) {
-      fidelidadeSaldoTexto.textContent =
-        "Fidelidade: " +
-        saldo.pontos +
-        " pontos (R$ " +
-        saldo.valorDisponivel.toFixed(2) +
-        " de desconto disponível)";
+      if (saldo.pontos === 0) {
+        fidelidadeSaldoTexto.textContent =
+          "Fidelidade: 0 pontos. Você ganhará 1 ponto a cada R$1,00 gasto neste pedido.";
+      } else {
+        fidelidadeSaldoTexto.textContent =
+          "Fidelidade: " +
+          saldo.pontos +
+          " pontos (R$ " +
+          saldo.valorDisponivel.toFixed(2) +
+          " de desconto disponível)";
+      }
     }
 
     if (fidelidadePontosUsarInput) {
@@ -285,9 +290,6 @@ async function carregarFidelidadePorCpf() {
       fidelidadeHistoricoBox.classList.add("escondido");
     }
 
-    if (nome) {
-      await Fidelidade.buscarOuCriarCliente(validacao.cpf, nome);
-    }
   } catch (erro) {
     alert("Fidelidade: " + erro.message);
   }
@@ -649,7 +651,7 @@ if (enviarPedidoBtn) {
       }
 
       try {
-        const saldo = await Fidelidade.consultarSaldo(validacaoCpf.cpf);
+        const saldo = await Fidelidade.consultarSaldo(validacaoCpf.cpf, customerName);
         fidelidadeSaldoPontos = saldo.pontos;
       } catch (erro) {
         alert("Fidelidade: " + erro.message);
